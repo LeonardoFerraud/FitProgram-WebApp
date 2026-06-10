@@ -29,3 +29,36 @@ body{
 .navLink a:hover{
     color: rgb(99, 99, 1)
 }
+
+.workout{
+    background-color: #ffffff;
+}
+
+.workout h2{
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 100%;
+    color: rgb(20, 88, 128);
+    padding: 1%;
+}
+
+table{
+    font-family: monospace;
+    font-weight: bold;
+    padding: 1%;
+}
+
+th{
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 99, 1);
+}
+
+td{
+    color: rgb(255, 255, 255);
+    padding: 2%;
+    background-color: rgb(20, 88, 128);
+}
+
+table td:hover{
+    background-color: rgb(99, 99, 1);
+}
