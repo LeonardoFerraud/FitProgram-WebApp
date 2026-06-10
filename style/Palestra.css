@@ -1,5 +1,7 @@
 body{
+    margin: 0;
     background-color: rgb(20, 88, 128);
+    font-family: monospace;
 }
 
 /* Rimuove i margini di default e imposta lo stile della navbar */
@@ -8,14 +10,23 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    width: min(100%, 1000px);
 }
 
 /* Rimuove i pallini della lista e mette i link in riga */
 .navLink {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    gap: 20px;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.navLink li {
+    margin: 0;
 }
 
 .navLink a{
@@ -30,8 +41,19 @@ body{
     color: rgb(99, 99, 1)
 }
 
+.gymSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 .workout{
     background-color: #ffffff;
+    overflow: hidden;
+    padding: 0 1rem 1rem;
 }
 
 .workout h2{
@@ -39,13 +61,27 @@ body{
     font-weight: bold;
     font-size: 100%;
     color: rgb(20, 88, 128);
-    padding: 1%;
+    padding: 1rem 0 0;
+    margin: 0;
 }
 
 table{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     font-family: monospace;
     font-weight: bold;
-    padding: 1%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    display: table-row;
+}
+
+th,
+td{
+    padding: 0.75rem 0.5rem;
+    text-align: left;
 }
 
 th{
@@ -53,12 +89,57 @@ th{
     background-color: rgb(99, 99, 1);
 }
 
-td{
-    color: rgb(255, 255, 255);
-    padding: 2%;
+td{    color: rgb(255, 255, 255);
     background-color: rgb(20, 88, 128);
 }
 
 table td:hover{
     background-color: rgb(99, 99, 1);
+}
+
+.workout table {
+    display: block;
+    overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+    .navBar {
+        justify-content: center;
+    }
+
+    .navLink {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .gymSection {
+        padding: 0.75rem;
+    }
+
+    .workout h2 {
+        padding: 0.75rem;
+    }
+
+    th,
+    td {
+        padding: 0.65rem 0.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .navLink {
+        gap: 10px;
+    }
+
+    .workout h2 {
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
 }
