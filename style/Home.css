@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(20, 88, 128);
+}
+
+/* Rimuove i margini di default e imposta lo stile della navbar */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    margin: auto;
+}
+
+/* Rimuove i pallini della lista e mette i link in riga */
+.navLink {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navLink a{
+    font-family: monospace;
+    font-size: 100%;
+    color: rgb(20, 88, 128);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navLink a:hover{
+    color: rgb(99, 99, 1)
+}
